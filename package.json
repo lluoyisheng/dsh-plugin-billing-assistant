@@ -1,0 +1,59 @@
+{
+  "name": "dsh-plugin-billing-assistant",
+  "version": "1.0.0",
+  "description": "计费助手：在 DSH 侧边栏左下角显示账户余额、峰/谷计费时段与 token 消耗，并提供按目录与对话查看用量和估算费用的面板。",
+  "icon": "./icon.svg",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "icon.svg",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "lib/index.js",
+    "lib/client.js",
+    "docs/*.png",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "billing",
+    "usage",
+    "token"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  }
+}

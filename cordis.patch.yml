@@ -1,0 +1,8 @@
+# 计费助手（billing assistant）bundle layer.
+#
+# This package is both the bundle and the plugin: installing it adds the layer
+# below, which mounts the package itself as one Loader entry. `dsh.client` in
+# package.json then supplies the browser half.
+- insert:
+    - id: billing-assistant
+      name: 'dsh-plugin-billing-assistant'
