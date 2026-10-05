@@ -25,10 +25,7 @@ DSH（DeepSeek Harness）插件：在侧边栏左下角显示**账户余额**、
 
 | 来源 | 填什么 |
 | --- | --- |
-| npm（发布后） | `dsh-plugin-billing-assistant` |
-| git 仓库 | `git+https://github.com/<you>/<repo>.git` |
-| 本地目录 | `D:\path\to\dsh-plugin-billing-assistant` |
-| 本地 tarball | `D:\path\to\dsh-plugin-billing-assistant-1.0.0.tgz` |
+| npm | `dsh-plugin-billing-assistant` |
 
 安装后 DSH 会：把包装进 profile 的 `node_modules` → 把包名写入 profile `package.json` 的 `dsh.profile.bundles` → 应用包内 `cordis.patch.yml`（插入 `billing-assistant` 这个 entry）→ 客户端半边自动加载。**无需重启**。
 
